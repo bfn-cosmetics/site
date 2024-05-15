@@ -41,7 +41,7 @@ export function SectionVideo() {
 					)}
 				/>
 				<div className={cn(styles.content, 'grid leading-[1.4]')}>
-					<div className='lg:order-0 order-1 flex flex-col'>
+					<div className='order-1 flex flex-col lg:order-none'>
 						<div className={cn(styles.contentText1)}>
 							<p className='lg:max-w-[19.619em]'>
 								–&nbsp;наука, направленная на&nbsp;создание непроницаемого
@@ -67,7 +67,7 @@ export function SectionVideo() {
 							ламеллярную дерма-мембранную структуру DMS&nbsp;- липидную
 							композицию, сходную по&nbsp;составу с&nbsp;роговым слоем кожи.
 						</div>
-						<button className='mt-[2.3em] flex items-center gap-[.71428em] font-light lg:mt-auto'>
+						<button className='mt-[2.3em] flex items-center gap-[.71428em] font-light lg:mt-auto lg:hidden'>
 							<span className='mt-[0.2em] border-b border-current leading-[1]'>
 								Подробнее
 							</span>{' '}
