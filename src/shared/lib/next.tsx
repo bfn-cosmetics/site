@@ -2,7 +2,7 @@ import ImageNext, { type ImageProps } from 'next/image'
 
 function prefixedAsset(src: ImageProps['src']) {
 	if (process.env.GITHUB_REPOSITORY) {
-		return process.env.GITHUB_REPOSITORY.replace(/.*?\//, '') + '/' + src
+		return process.env.GITHUB_REPOSITORY.replace(/.*?\//, '') + src
 	}
 	return src
 }
