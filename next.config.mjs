@@ -3,7 +3,7 @@
 const isGithubActions = process.env.GITHUB_ACTIONS || false
 
 let assetPrefix = ''
-let basePath = '/'
+let basePath = ''
 
 if (isGithubActions) {
 	// trim off `<owner>/`
@@ -11,11 +11,6 @@ if (isGithubActions) {
 
 	assetPrefix = `/${repo}/`
 	basePath = `/${repo}`
-}
-
-module.exports = {
-	assetPrefix: assetPrefix,
-	basePath: basePath
 }
 
 const nextConfig = {
