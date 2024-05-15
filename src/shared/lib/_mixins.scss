@@ -20,14 +20,17 @@
 	}
 }
 
-@mixin adaptive-font-size-down($idealSize, $minMedia, $maxMedia) {
+@mixin adaptive-font-size-down($idealSize, $minMedia, $maxMedia, $mode: '') {
 	$setValues: ();
 	$coff: math.div($idealSize, $maxMedia);
 
 	@for $currentMedia from $minMedia through $maxMedia {
 		$currentSize: $coff * $currentMedia;
-		@if (math.round($currentSize * 100) == $currentSize * 100) and not
-			list.index($setValues, math.round($currentSize))
+		@if (($mode == 'min-include') and ($currentMedia == $minMedia)) or
+			(
+				(math.round($currentSize * 100) == $currentSize * 100) and not
+					list.index($setValues, math.round($currentSize))
+			)
 		{
 			$setValues: list.append($setValues, math.round($currentSize));
 
@@ -44,8 +47,7 @@
 		'sm': 600,
 		'md': 768,
 		'lg': 992,
-		'xl': 1280,
-		'2xl': 1440
+		'xl': 1280
 	);
 
 	@each $name, $px in $mediaQueries {

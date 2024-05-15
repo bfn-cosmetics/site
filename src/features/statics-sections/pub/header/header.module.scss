@@ -2,12 +2,12 @@
 
 .wrapper {
 	@include adaptive-font-size-down(15, 1, 480);
-	@include adaptive-font-size-up(16, 481, 599);
-	@include adaptive-font-size-up(15, 600, 767);
+	@include adaptive-font-size-up(15, 481, 767);
 	@include adaptive-font-size-up(12, 768, 991);
+
 	@include adaptive-font-size-up(15, 992, 1279);
-	@include adaptive-font-size-up(18, 1280, 1440);
-	@include adaptive-font-size-down(21, 1441, 1920);
+	@include adaptive-font-size-down(21, 1280, 1920, 'min-include');
+	@include adaptive-font-size-up(21, 1920, 2600);
 }
 
 .header {
@@ -34,10 +34,6 @@
 			'xl': (
 				padding-top: 20,
 				padding-bottom: 20
-			),
-			'2xl': (
-				padding-top: 20,
-				padding-bottom: 20
 			)
 		)
 	);
@@ -45,7 +41,7 @@
 	@media (min-width: 768px) {
 		grid-template-columns: 1fr 5.8333em 1fr;
 	}
-	@media (min-width: 1440px) {
+	@media (min-width: 1280px) {
 		grid-template-columns: 1fr 6.4285em 1fr;
 	}
 }
@@ -53,7 +49,7 @@
 .leftActions {
 	gap: 1.6666em;
 
-	@media (min-width: 1440px) {
+	@media (min-width: 1280px) {
 		gap: 2.8571em;
 	}
 }
@@ -61,7 +57,7 @@
 .rightActions {
 	gap: 1.7341em;
 
-	@media (min-width: 1440px) {
+	@media (min-width: 1280px) {
 		gap: 1.4285em;
 	}
 }
@@ -82,7 +78,7 @@
 		height: 1.35em;
 		width: 1.4333em;
 	}
-	@media (min-width: 1440px) {
+	@media (min-width: 1280px) {
 		height: 1.5238em;
 		width: 1.7619em;
 	}
@@ -104,7 +100,7 @@
 	@media (min-width: 768px) {
 		gap: 0.42em;
 	}
-	@media (min-width: 1440px) {
+	@media (min-width: 1280px) {
 		gap: 0.5714em;
 	}
 }

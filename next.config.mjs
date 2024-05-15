@@ -2,7 +2,7 @@
 
 const isGithubActions = process.env.GITHUB_ACTIONS || false
 
-let assetPrefix = 'https://cdn.mydomain.com'
+let assetPrefix = ''
 let basePath = ''
 
 if (isGithubActions) {

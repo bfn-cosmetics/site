@@ -12,7 +12,8 @@
 	--coff-sm: 6;
 	--coff-md: 7.68;
 	--coff-lg: 9.92;
-	--coff-xl: 12.8;
+	// --coff-xl: 12.8;
+	--coff-xl: 19.2;
 	--coff-2xl: 19.2;
 }
 
@@ -43,7 +44,7 @@ body {
 }
 
 .container {
-	@apply w-full px-container-xs sm:px-container-sm md:px-container-md lg:px-container-lg xl:px-container-xl 2xl:px-container-2xl;
+	@apply w-full px-container-xs sm:px-container-sm md:px-container-md lg:px-container-lg xl:px-container-xl;
 }
 
 .embla {
@@ -64,9 +65,11 @@ body {
 	@include adaptive-font-size-up(51, 481, 599);
 	@include adaptive-font-size-up(55, 600, 767);
 	@include adaptive-font-size-up(60, 768, 991);
-	@include adaptive-font-size-up(70, 992, 1279);
-	@include adaptive-font-size-up(85, 1280, 1440);
-	@include adaptive-font-size-down(140, 1441, 1920);
+
+	@include adaptive-font-size-up(80, 992, 1279);
+	@include adaptive-font-size-down(140, 1280, 1920, 'min-include');
+	@include adaptive-font-size-up(140, 1920, 2600);
+
 	line-height: 1;
 	font-weight: 300;
 	text-transform: uppercase;
