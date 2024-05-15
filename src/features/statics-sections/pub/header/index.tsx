@@ -1,7 +1,7 @@
-import Image from 'next/image'
 import Link from 'next/link'
 
 import { cn } from '@/shared/lib/class-names'
+import { Image } from '@/shared/lib/next'
 
 import styles from './header.module.scss'
 

@@ -1,10 +1,10 @@
 'use client'
 
 import useEmblaCarousel from 'embla-carousel-react'
-import Image from 'next/image'
 
 import { cn } from '@/shared/lib/class-names'
 import { usePrevNextButtons } from '@/shared/lib/embla'
+import { Image } from '@/shared/lib/next'
 
 import styles from './section.module.scss'
 
