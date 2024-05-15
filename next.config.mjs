@@ -22,8 +22,7 @@ const nextConfig = {
 		return config
 	},
 	images: {
-		loader: 'imgix',
-		path: 'https://bfn-820954665.imgix.net/'
+		unoptimized: true
 	}
 }
 
