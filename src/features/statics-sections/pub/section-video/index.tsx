@@ -30,13 +30,13 @@ export function SectionVideo() {
 				<SVGSignTable
 					className={cn(
 						styles.titleSignTable,
-						'title-section pointer-events-none relative z-[1] hidden md:block lg:hidden'
+						'title-section pointer-events-none relative z-[1] hidden sm:block lg:hidden'
 					)}
 				/>
 				<SVGSignMob
 					className={cn(
 						styles.titleSignMob,
-						'title-section pointer-events-none relative z-[1] md:hidden'
+						'title-section pointer-events-none relative z-[1] sm:hidden'
 					)}
 				/>
 				<div className={cn(styles.content, 'grid leading-[1.4]')}>
@@ -59,9 +59,14 @@ export function SectionVideo() {
 							<SVGArrow className='h-[3.428em] w-[3.428em]' />
 						</button>
 					</div>
-					<div className='mb-[4.0364vw] aspect-[420/295] self-center bg-default-words md:aspect-[708/400] lg:mb-0 lg:aspect-[660/675]'></div>
+					<div className='mb-[4.0364vw] aspect-[420/295] self-center bg-default-words sm:aspect-[708/400] lg:mb-0 lg:aspect-[660/675]'></div>
 					<div className='order-1 flex flex-col'>
-						<div className='mt-[.4em] lg:ml-[1.6666em] lg:mt-auto'>
+						<div
+							className={cn(
+								styles.test,
+								'mt-[.4em] lg:ml-[1.6666em] lg:mt-auto'
+							)}
+						>
 							Вместо обычной эмульсионной основы, мы&nbsp;используем уникальную
 							ламеллярную дерма-мембранную структуру DMS&nbsp;- липидную
 							композицию, сходную по&nbsp;составу с&nbsp;роговым слоем кожи.
@@ -70,7 +75,7 @@ export function SectionVideo() {
 							<span className='mt-[0.2em] border-b border-current leading-[1]'>
 								Подробнее
 							</span>{' '}
-							<SVGArrow className='h-[3.4375] w-[3.4375em] md:h-[3.75em] md:w-[3.75em] lg:h-[3.428em] lg:w-[3.428em]' />
+							<SVGArrow className='h-[3.4375] w-[3.4375em] sm:h-[3.75em] sm:w-[3.75em] lg:h-[3.428em] lg:w-[3.428em]' />
 						</button>
 					</div>
 				</div>

@@ -3,7 +3,7 @@
 .section {
 	padding-top: 5%;
 	padding-bottom: 5%;
-	@media (min-width: 768px) {
+	@media (min-width: #{$_media-table}px) {
 		padding-top: 2.6562%;
 	}
 }
@@ -38,56 +38,53 @@
 	left: 4vw;
 	z-index: -1;
 
-	@media (min-width: 768px) {
+	@media (min-width: #{$_media-table}px) {
 		top: -4.3vw;
 		left: 0vw;
 	}
 
-	@media (min-width: 992px) {
+	@media (min-width: #{$_media-table-desk}px) {
 		top: -5.7vw;
 		left: 7vw;
 	}
 
 	@include adaptive-set-all-media(
 		(
-			'xs': (
+			'phone': (
 				width: 100
 			),
-			'sm': (
-				width: 128
-			),
-			'md': (
+			'table': (
 				width: 152
 			),
-			'lg': (
-				'width': 180
+			'table-desk': (
+				width: 180
 			),
-			'xl': (
-				'width': 269
+			'desk': (
+				width: 269
 			)
 		)
 	);
 }
 
 .content {
-	@include adaptive-font-size-down(16, 1, 480);
-	@include adaptive-font-size-up(17, 481, 599);
-	@include adaptive-font-size-up(18, 600, 767);
-	@include adaptive-font-size-up(16, 768, 991);
-
-	@include adaptive-font-size-up(14, 992, 1279);
-	@include adaptive-font-size-down(21, 1280, 1920, 'min-include');
-	@include adaptive-font-size-up(21, 1920, 2600);
+	@include adaptive-font-sizes(
+		(
+			'phone': 16,
+			'table': 16,
+			'table-desk': 12,
+			'desk': 21
+		)
+	);
 
 	@include adaptive-set-all-media(
 		(
-			'xl': (
+			'desk': (
 				margin-top: -125
 			)
 		)
 	);
 
-	@media (min-width: 992px) {
+	@media (min-width: #{$_media-table-desk}px) {
 		grid-template-columns: 1fr 34.375vw 1fr;
 	}
 }
@@ -96,9 +93,20 @@
 	margin-right: 1em;
 	@include adaptive-set-all-media(
 		(
-			'xl': (
+			'desk': (
 				margin-top: 150
 			)
+		)
+	);
+}
+
+.test {
+	@include adaptive-font-sizes(
+		(
+			'phone': 12,
+			'table': 14,
+			'table-desk': 12,
+			'desk': 16
 		)
 	);
 }

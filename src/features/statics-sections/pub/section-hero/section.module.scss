@@ -4,38 +4,35 @@
 	aspect-ratio: 480 / 926;
 	padding-bottom: 9.583%;
 
-	@media (min-width: 600px) {
-		aspect-ratio: 480 / 750;
-	}
-
-	@media (min-width: 768px) {
+	@media (min-width: #{$_media-table}px) {
 		aspect-ratio: 768 / 432;
 		padding-bottom: 2.6041%;
 	}
-	@media (min-width: 1280px) {
+
+	@media (min-width: #{$_media-desk}px) {
 		aspect-ratio: 1920 / 940;
 		padding-bottom: 2.6565%;
 	}
 }
 
 .title {
-	@include adaptive-font-size-down(100, 1, 480);
-	@include adaptive-font-size-up(100, 481, 599);
-	@include adaptive-font-size-up(125, 600, 767);
-	@include adaptive-font-size-up(80, 768, 991);
-
-	@include adaptive-font-size-up(100, 992, 1279);
-	@include adaptive-font-size-down(210, 1280, 1920, 'min-include');
-	@include adaptive-font-size-up(210, 1920, 2600);
+	@include adaptive-font-sizes(
+		(
+			'phone': 100,
+			'table': 80,
+			'table-desk': 100,
+			'desk': 210
+		)
+	);
 
 	margin-bottom: 0.25em;
 	margin-top: 1.6em;
-	@media (min-width: 768px) {
+	@media (min-width: #{$_media-table}px) {
 		margin-top: 0.15em;
 		margin-left: -0.2em;
 		margin-bottom: 0.1em;
 	}
-	@media (min-width: 1280px) {
+	@media (min-width: #{$_media-desk}px) {
 		margin-top: 0;
 		margin-left: -0.2452em;
 		margin-bottom: 0.2em;
@@ -45,11 +42,11 @@
 .titleSign {
 	width: 4em;
 	height: 1.7em;
-	@media (min-width: 768px) {
+	@media (min-width: #{$_media-table}px) {
 		width: 4.75em;
 		height: 2em;
 	}
-	@media (min-width: 1280px) {
+	@media (min-width: #{$_media-desk}px) {
 		width: 3.8633em;
 		height: 2.05em;
 	}
@@ -57,49 +54,53 @@
 
 .titleText {
 	margin-left: 0.17em;
-	@media (min-width: 768px) {
+	@media (min-width:  #{$_media-table}px) {
 		margin-left: 0;
 		margin-bottom: -0.8em;
 	}
-	@media (min-width: 1280px) {
+	@media (min-width:  #{$_media-desk}px) {
 		margin-bottom: -0.696em;
 	}
 }
 
 .text {
-	@include adaptive-font-size-down(18, 1, 480);
-	@include adaptive-font-size-up(19, 481, 599);
-	@include adaptive-font-size-up(21, 600, 767);
-	@include adaptive-font-size-up(14, 768, 991);
-
-	@include adaptive-font-size-up(16, 992, 1279);
-	@include adaptive-font-size-down(21, 1280, 1920, 'min-include');
-	@include adaptive-font-size-up(21, 1920, 2600);
+	@include adaptive-font-sizes(
+		(
+			'phone': 18,
+			'table': 14,
+			'table-desk': 16,
+			'desk': 21
+		)
+	);
 
 	max-width: 20.09em;
 	margin-left: 0.9em;
-	@media (min-width: 768px) {
+	@media (min-width: #{$_media-table}px) {
 		margin-left: 0;
 		max-width: 26.1904em;
+		width: 54%;
+	}
+	@media (min-width: #{$_media-table-desk}px) {
+		width: auto;
 	}
 }
 
 .buttonPlayer {
 	@include adaptive-set-all-media(
 		(
-			'xs': (
+			'phone': (
 				width: 60,
 				height: 60
 			),
-			'md': (
+			'table': (
 				width: 50,
 				height: 50
 			),
-			'lg': (
+			'table-desk': (
 				width: 60,
 				height: 60
 			),
-			'xl': (
+			'desk': (
 				width: 80,
 				height: 80
 			)

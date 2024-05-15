@@ -14,7 +14,7 @@ export function SectionHero() {
 				<h1
 					className={cn(
 						styles.title,
-						'flex flex-col font-light uppercase leading-[1.1809] text-accent sm:justify-between md:flex-row md:items-end'
+						'flex flex-col font-light uppercase leading-[1.1809] text-accent sm:flex-row sm:items-end sm:justify-between'
 					)}
 				>
 					<SVGSign className={cn(styles.titleSign, 'shrink-0')} />{' '}

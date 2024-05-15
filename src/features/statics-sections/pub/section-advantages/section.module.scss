@@ -3,7 +3,7 @@
 .section {
 	padding-bottom: 14.2%;
 	padding-top: 12.4%;
-	@media (min-width: 992px) {
+	@media (min-width: #{$_media-table-desk}px) {
 		padding-top: 17.7%;
 		padding-bottom: 13.3333%;
 	}
@@ -13,13 +13,13 @@
 	width: 6em;
 	height: 1.9em;
 	margin-bottom: -0.4em;
-	@media (min-width: 600px) {
+	@media (min-width: #{$_media-table}px) {
 		width: 7.9em;
 		height: 2.0666em;
 		margin-bottom: -0.6em;
 	}
 
-	@media (min-width: 992px) {
+	@media (min-width: #{$_media-table-desk}px) {
 		margin-left: 1.89em;
 		margin-bottom: -0.07em;
 		width: 4.2357em;
@@ -30,7 +30,7 @@
 .titleSpan0 {
 	margin-left: -0.0928em;
 	margin-bottom: 0.14em;
-	@media (min-width: 992px) {
+	@media (min-width: #{$_media-table-desk}px) {
 		margin-bottom: 0;
 	}
 }
@@ -38,11 +38,11 @@
 .titleSpan1 {
 	margin-left: -0.1em;
 	margin-bottom: 0.19em;
-	@media (min-width: 600px) {
+	@media (min-width: #{$_media-table}px) {
 		margin-left: -0.06em;
 		margin-bottom: 0;
 	}
-	@media (min-width: 992px) {
+	@media (min-width: #{$_media-table-desk}px) {
 		margin-left: 1.82em;
 		margin-left: 0;
 		margin-top: -0.05em;
@@ -51,10 +51,10 @@
 
 .titleSpan2 {
 	margin-left: 2.52em;
-	@media (min-width: 600px) {
+	@media (min-width: #{$_media-table}px) {
 		margin-left: 0.21em;
 	}
-	@media (min-width: 992px) {
+	@media (min-width: #{$_media-table-desk}px) {
 		margin-left: 1.82em;
 		margin-top: -0.05em;
 	}
@@ -62,7 +62,7 @@
 
 .titleBr {
 	flex: 0 0 100%;
-	@media (min-width: 992px) {
+	@media (min-width: #{$_media-table-desk}px) {
 		display: none;
 	}
 }
@@ -70,26 +70,23 @@
 .leaf1 {
 	top: -4vw;
 	left: 2vw;
-	@media (min-width: 768px) {
+	@media (min-width: #{$_media-table}px) {
 		left: 3.8vw;
 		top: 5.8vw;
 	}
 	@include adaptive-set-all-media(
 		(
-			'xs': (
+			'phone': (
 				width: 100
 			),
-			'sm': (
-				width: 125
-			),
-			'md': (
+			'table': (
 				width: 145
 			),
-			'lg': (
-				'width': 195
+			'table-desk': (
+				'width': 170
 			),
-			'xl': (
-				'width': 275
+			'desk': (
+				width: 275
 			)
 		)
 	);
@@ -98,27 +95,24 @@
 .leaf2 {
 	left: 16.1vw;
 	top: -3.2vw;
-	@media (min-width: 768px) {
+	@media (min-width: #{$_media-table}px) {
 		left: 14.1vw;
 		top: 6.8vw;
 	}
 
 	@include adaptive-set-all-media(
 		(
-			'xs': (
+			'phone': (
 				width: 78
 			),
-			'sm': (
-				width: 85
-			),
-			'md': (
+			'table': (
 				width: 98
 			),
-			'lg': (
-				'width': 140
+			'table-desk': (
+				width: 140
 			),
-			'xl': (
-				'width': 196
+			'desk': (
+				width: 196
 			)
 		)
 	);
@@ -130,11 +124,11 @@
 
 	@include adaptive-set-all-media(
 		(
-			'lg': (
-				'width': 220
+			'table-desk': (
+				width: 220
 			),
-			'xl': (
-				'width': 272
+			'desk': (
+				width: 272
 			)
 		)
 	);
@@ -143,11 +137,11 @@
 .leaf4 {
 	top: 24vw;
 	right: -1vw;
-	@media (min-width: 768px) {
+	@media (min-width: #{$_media-table}px) {
 		top: 4vw;
 		right: 5vw;
 	}
-	@media (min-width: 992px) {
+	@media (min-width: #{$_media-table-desk}px) {
 		top: auto;
 		right: 2.6vw;
 		bottom: 13.3vw;
@@ -155,19 +149,16 @@
 
 	@include adaptive-set-all-media(
 		(
-			'xs': (
+			'phone': (
 				width: 130
 			),
-			'sm': (
-				width: 150
-			),
-			'md': (
+			'table': (
 				width: 185
 			),
-			'lg': (
+			'table-desk': (
 				width: 215
 			),
-			'xl': (
+			'desk': (
 				width: 351
 			)
 		)
@@ -177,11 +168,11 @@
 .leaf5 {
 	top: 38vw;
 	right: -1vw;
-	@media (min-width: 768px) {
+	@media (min-width: #{$_media-table}px) {
 		top: 16vw;
 		right: 6vw;
 	}
-	@media (min-width: 992px) {
+	@media (min-width: #{$_media-table-desk}px) {
 		top: auto;
 		right: 9.3vw;
 		bottom: 0vw;
@@ -189,19 +180,16 @@
 
 	@include adaptive-set-all-media(
 		(
-			'xs': (
+			'phone': (
 				width: 118
 			),
-			'sm': (
-				width: 136
-			),
-			'md': (
+			'table': (
 				width: 162
 			),
-			'lg': (
+			'table-desk': (
 				width: 205
 			),
-			'xl': (
+			'desk': (
 				width: 377
 			)
 		)
@@ -214,10 +202,10 @@
 
 	@include adaptive-set-all-media(
 		(
-			'lg': (
+			'table-desk': (
 				'width': 109
 			),
-			'xl': (
+			'desk': (
 				'width': 149
 			)
 		)
@@ -227,21 +215,22 @@
 .gridPlates {
 	margin-left: -7.2vw;
 	margin-top: -6vw;
-	@media (min-width: 600px) {
+	@media (min-width: #{$_media-table}px) {
 		margin-left: -3.90625vw;
 		margin-top: 3.854vw;
 	}
-	@media (min-width: 992px) {
+	@media (min-width: #{$_media-table-desk}px) {
 		margin-left: 0;
 		margin-top: 0;
 	}
+
 	@include adaptive-set-all-media(
 		(
-			'lg': (
-				margin-top: -80,
+			'table-desk': (
+				margin-top: -100,
 				height: 280 * 2 + 20
 			),
-			'xl': (
+			'desk': (
 				margin-top: -212,
 				height: 423 * 2 + 32
 			)
@@ -255,30 +244,30 @@
 	min-width: 0;
 	flex-basis: 64%;
 	margin-left: 7.2vw;
-	@media (min-width: 600px) {
+	@media (min-width: #{$_media-table}px) {
 		margin-left: 3.90625vw;
 		flex-basis: calc(50% - 3.90625vw);
 	}
-	@media (min-width: 992px) {
+	@media (min-width: #{$_media-table-desk}px) {
 		margin-left: 0;
 		position: absolute;
 	}
 
-	@include adaptive-font-size-down(16, 1, 480);
-	@include adaptive-font-size-up(17, 481, 599);
-	@include adaptive-font-size-up(18, 600, 767);
-	@include adaptive-font-size-up(16, 768, 991);
-
-	@include adaptive-font-size-up(17, 992, 1279);
-	@include adaptive-font-size-down(21, 1280, 1920, 'min-include');
-	@include adaptive-font-size-up(21, 1920, 2600);
+	@include adaptive-font-sizes(
+		(
+			'phone': 16,
+			'table': 16,
+			'table-desk': 12,
+			'desk': 21
+		)
+	);
 
 	@include adaptive-set-all-media(
 		(
-			'lg': (
+			'table-desk': (
 				width: 280
 			),
-			'xl': (
+			'desk': (
 				width: 423
 			)
 		)
@@ -288,7 +277,7 @@
 		opacity: 0;
 	}
 
-	@media (hover: hover) or (min-width: 992px) {
+	@media (hover: hover) or (min-width: #{$_media-table-desk}) {
 		.platePlus {
 			opacity: 1;
 		}
@@ -313,7 +302,7 @@
 	transition: 600ms ease-in-out;
 	padding-left: 1.25em;
 	padding-right: 0.625em;
-	@media (min-width: 600px) {
+	@media (min-width: #{$_media-table}px) {
 		padding-left: 2.1428em;
 		padding-right: 1.8095em;
 	}
@@ -326,32 +315,32 @@
 }
 
 .plate1 {
-	@media (min-width: 992px) {
+	@media (min-width: #{$_media-table-desk}px) {
 		top: 40.6%;
 		transform: translate(0, -50%);
 	}
 	@include adaptive-set-all-media(
 		(
-			'lg': (
+			'table-desk': (
 				left: 0
 			),
-			'xl': (
-				'left': 268
+			'desk': (
+				left: 268
 			)
 		)
 	);
 }
 
 .plate2 {
-	@media (min-width: 992px) {
+	@media (min-width: #{$_media-table-desk}px) {
 		top: 0;
 	}
 	@include adaptive-set-all-media(
 		(
-			'lg': (
+			'table-desk': (
 				left: 0 + 20 + 280
 			),
-			'xl': (
+			'desk': (
 				'left': 268 + 32 + 423
 			)
 		)
@@ -359,33 +348,33 @@
 }
 
 .plate3 {
-	@media (min-width: 992px) {
+	@media (min-width: #{$_media-table-desk}px) {
 		bottom: 0;
 	}
 	@include adaptive-set-all-media(
 		(
-			'lg': (
+			'table-desk': (
 				left: 0 + 20 + 280
 			),
-			'xl': (
-				'left': 268 + 32 + 423
+			'desk': (
+				left: 268 + 32 + 423
 			)
 		)
 	);
 }
 
 .plate4 {
-	@media (min-width: 992px) {
+	@media (min-width: #{$_media-table-desk}px) {
 		top: 40.6%;
 		transform: translate(0, -50%);
 	}
 	@include adaptive-set-all-media(
 		(
-			'lg': (
-				'left': 0 + 20 + 280 + 20 + 280
+			'table-desk': (
+				left: 0 + 20 + 280 + 20 + 280
 			),
-			'xl': (
-				'left': 268 + 32 + 423 + 32 + 423
+			'desk': (
+				left: 268 + 32 + 423 + 32 + 423
 			)
 		)
 	);

@@ -188,7 +188,7 @@ export function SectionAdvantages() {
 							</div>
 						</div>
 					</div>
-					<div className='mt-[6.25vw] flex justify-center gap-[4.16666vw] md:mt-[4.8vw] lg:hidden'>
+					<div className='mt-[6.25vw] flex justify-center gap-[4.16666vw] sm:mt-[4.8vw] lg:hidden'>
 						<button onClick={onPrevButtonClick}>
 							<SVGArrow className='h-[8.3333vw] w-[8.3333vw] rotate-180 sm:h-[6.5104vw] sm:w-[6.5104vw]' />
 						</button>
@@ -203,14 +203,14 @@ export function SectionAdvantages() {
 				alt=''
 				width={275}
 				height={160}
-				className={cn('leaf md:hidden lg:block', styles.leaf1)}
+				className={cn('leaf sm:hidden lg:block', styles.leaf1)}
 			/>
 			<Image
 				src='/assets/leafs/2.png'
 				alt=''
 				width={196}
 				height={180}
-				className={cn('leaf md:hidden lg:block', styles.leaf2)}
+				className={cn('leaf sm:hidden lg:block', styles.leaf2)}
 			/>
 			<Image
 				src='/assets/leafs/3.png'

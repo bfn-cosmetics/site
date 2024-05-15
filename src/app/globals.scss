@@ -8,13 +8,10 @@
 	--foreground-rgb: 0, 0, 0;
 	--background-start-rgb: 214, 219, 220;
 	--background-end-rgb: 255, 255, 255;
-	--coff-xs: 4.8;
-	--coff-sm: 6;
-	--coff-md: 7.68;
-	--coff-lg: 9.92;
-	// --coff-xl: 12.8;
-	--coff-xl: 19.2;
-	--coff-2xl: 19.2;
+	--coff-phone: 4.8;
+	--coff-table: 7.68;
+	--coff-table-desk: 9.92;
+	--coff-desk: 19.2;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,16 +22,13 @@
 	}
 }
 
-html {
-	max-width: min(100%, 100vw);
-	overflow-x: hidden;
-}
-
 body {
 	text-rendering: optimizeSpeed;
 	font-feature-settings: 'lnum', 'pnum';
-	max-width: min(100%, 100vw);
 	overflow-x: hidden;
+	overflow-y: auto;
+	width: 100%;
+	height: 100vh;
 }
 
 @layer utilities {
@@ -44,7 +38,27 @@ body {
 }
 
 .container {
-	@apply w-full px-container-xs sm:px-container-sm md:px-container-md lg:px-container-lg xl:px-container-xl;
+	width: 100%;
+	@include adaptive-set-all-media(
+		(
+			'phone': (
+				padding-left: 30,
+				padding-right: 30
+			),
+			'table': (
+				padding-left: 30,
+				padding-right: 30
+			),
+			'table-desk': (
+				padding-left: 80,
+				padding-right: 80
+			),
+			'desk': (
+				padding-left: 160,
+				padding-right: 160
+			)
+		)
+	);
 }
 
 .embla {
@@ -61,14 +75,14 @@ body {
 }
 
 .title-section {
-	@include adaptive-font-size-down(50, 1, 480);
-	@include adaptive-font-size-up(51, 481, 599);
-	@include adaptive-font-size-up(55, 600, 767);
-	@include adaptive-font-size-up(60, 768, 991);
-
-	@include adaptive-font-size-up(80, 992, 1279);
-	@include adaptive-font-size-down(140, 1280, 1920, 'min-include');
-	@include adaptive-font-size-up(140, 1920, 2600);
+	@include adaptive-font-sizes(
+		(
+			'phone': 50,
+			'table': 60,
+			'table-desk': 80,
+			'desk': 140
+		)
+	);
 
 	line-height: 1;
 	font-weight: 300;

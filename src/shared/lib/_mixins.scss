@@ -2,19 +2,21 @@
 @use 'sass:list';
 @use 'sass:map';
 
+$_media-table: 600;
+$_media-table-desk: 992;
+$_media-desk: 1280;
+
 @mixin adaptive-font-size-up($idealSize, $minMedia, $maxMedia) {
 	$setValues: ();
 	$coff: math.div($idealSize, $minMedia);
 
 	@for $currentMedia from $minMedia through $maxMedia {
-		$currentSize: $coff * $currentMedia;
-		@if (math.round($currentSize * 100) == $currentSize * 100) and not
-			list.index($setValues, math.round($currentSize))
-		{
-			$setValues: list.append($setValues, math.round($currentSize));
+		$currentSize: math.max($coff * $currentMedia, 12);
+		@if not list.index($setValues, math.ceil($currentSize)) {
+			$setValues: list.append($setValues, math.ceil($currentSize));
 
 			@media (min-width: #{$currentMedia}px) {
-				font-size: #{math.round($currentSize)}px;
+				font-size: #{math.ceil($currentSize)}px;
 			}
 		}
 	}
@@ -25,17 +27,14 @@
 	$coff: math.div($idealSize, $maxMedia);
 
 	@for $currentMedia from $minMedia through $maxMedia {
-		$currentSize: $coff * $currentMedia;
-		@if (($mode == 'min-include') and ($currentMedia == $minMedia)) or
-			(
-				(math.round($currentSize * 100) == $currentSize * 100) and not
-					list.index($setValues, math.round($currentSize))
-			)
+		$currentSize: math.max($coff * $currentMedia, 12);
+		@if (($mode == 'min-include') and ($currentMedia == $minMedia)) or not
+			list.index($setValues, math.ceil($currentSize))
 		{
-			$setValues: list.append($setValues, math.round($currentSize));
+			$setValues: list.append($setValues, math.ceil($currentSize));
 
 			@media (min-width: #{$currentMedia}px) {
-				font-size: #{math.round($currentSize)}px;
+				font-size: #{math.ceil($currentSize)}px;
 			}
 		}
 	}
@@ -43,11 +42,10 @@
 
 @mixin adaptive-set-all-media($mediaCss) {
 	$mediaQueries: (
-		'xs': 0,
-		'sm': 600,
-		'md': 768,
-		'lg': 992,
-		'xl': 1280
+		'phone': 0,
+		'table': $_media-table,
+		'table-desk': $_media-table-desk,
+		'desk': $_media-desk
 	);
 
 	@each $name, $px in $mediaQueries {
@@ -77,4 +75,28 @@
 	@each $property, $value in $css {
 		#{$property}: $value;
 	}
+}
+
+@mixin adaptive-font-sizes($sizes) {
+	// phone
+	@include adaptive-font-size-down(map.get($sizes, 'phone'), 1, 479);
+	@include adaptive-font-size-up(map.get($sizes, 'phone'), 480, 599);
+	// table
+	@include adaptive-font-size-down(
+		map.get($sizes, 'table'),
+		600,
+		767,
+		'min-include'
+	);
+	@include adaptive-font-size-up(map.get($sizes, 'table'), 768, 991);
+	// table-desk
+	@include adaptive-font-size-up(map.get($sizes, 'table-desk'), 992, 1279);
+	// desk
+	@include adaptive-font-size-down(
+		map.get($sizes, 'desk'),
+		1280,
+		1920,
+		'min-include'
+	);
+	@include adaptive-font-size-up(map.get($sizes, 'desk'), 1920, 2600);
 }

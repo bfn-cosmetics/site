@@ -1,13 +1,14 @@
 @import '@shared/lib/mixins';
 
 .wrapper {
-	@include adaptive-font-size-down(15, 1, 480);
-	@include adaptive-font-size-up(15, 481, 767);
-	@include adaptive-font-size-up(12, 768, 991);
-
-	@include adaptive-font-size-up(15, 992, 1279);
-	@include adaptive-font-size-down(21, 1280, 1920, 'min-include');
-	@include adaptive-font-size-up(21, 1920, 2600);
+	@include adaptive-font-sizes(
+		(
+			'phone': 15,
+			'table': 12,
+			'table-desk': 15,
+			'desk': 21
+		)
+	);
 }
 
 .header {
@@ -15,33 +16,29 @@
 
 	@include adaptive-set-all-media(
 		(
-			'xs': (
+			'phone': (
 				padding-top: 15,
 				padding-bottom: 15
 			),
-			'sm': (
-				padding-top: 15,
-				padding-bottom: 15
-			),
-			'md': (
+			'table': (
 				padding-top: 14,
 				padding-bottom: 14
 			),
-			'lg': (
+			'table-desk': (
 				padding-top: 16,
 				padding-bottom: 16
 			),
-			'xl': (
+			'desk': (
 				padding-top: 20,
 				padding-bottom: 20
 			)
 		)
 	);
 
-	@media (min-width: 768px) {
+	@media (min-width: #{$_media-table}px) {
 		grid-template-columns: 1fr 5.8333em 1fr;
 	}
-	@media (min-width: 1280px) {
+	@media (min-width: #{$_media-desk}px) {
 		grid-template-columns: 1fr 6.4285em 1fr;
 	}
 }
@@ -49,7 +46,7 @@
 .leftActions {
 	gap: 1.6666em;
 
-	@media (min-width: 1280px) {
+	@media (min-width: #{$_media-desk}px) {
 		gap: 2.8571em;
 	}
 }
@@ -57,7 +54,7 @@
 .rightActions {
 	gap: 1.7341em;
 
-	@media (min-width: 1280px) {
+	@media (min-width: #{$_media-desk}px) {
 		gap: 1.4285em;
 	}
 }
@@ -66,7 +63,7 @@
 	gap: 0.65em;
 	padding-right: 0.619em;
 
-	@media (min-width: 768px) {
+	@media (min-width: #{$_media-table}px) {
 		gap: 1.0952em;
 	}
 }
@@ -74,11 +71,11 @@
 .listButtonsIcon {
 	height: 1.2666em;
 	width: 1.4666em;
-	@media (min-width: 768px) {
+	@media (min-width: #{$_media-table}px) {
 		height: 1.35em;
 		width: 1.4333em;
 	}
-	@media (min-width: 1280px) {
+	@media (min-width: #{$_media-desk}px) {
 		height: 1.5238em;
 		width: 1.7619em;
 	}
@@ -90,17 +87,17 @@
 	top: -0.3571em;
 	right: -1em;
 	font-size: 0.6em;
-	@media (min-width: 600px) {
+	@media (min-width: #{$_media-table}px) {
 		font-size: 0.6666em;
 	}
 }
 
 .burger {
 	gap: 0.6666em;
-	@media (min-width: 768px) {
+	@media (min-width: #{$_media-table}px) {
 		gap: 0.42em;
 	}
-	@media (min-width: 1280px) {
+	@media (min-width: #{$_media-desk}px) {
 		gap: 0.5714em;
 	}
 }

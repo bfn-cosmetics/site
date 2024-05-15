@@ -23,7 +23,7 @@ export default function RootLayout({
 	return (
 		<html lang='ru'>
 			<body
-				className={cn(raleway.className, 'text-default-words bg-background')}
+				className={cn(raleway.className, 'bg-background text-default-words')}
 			>
 				{children}
 			</body>
