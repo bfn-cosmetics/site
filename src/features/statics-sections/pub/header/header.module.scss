@@ -1,0 +1,110 @@
+@import '@shared/lib/mixins';
+
+.wrapper {
+	@include adaptive-font-size-down(15, 1, 480);
+	@include adaptive-font-size-up(16, 481, 599);
+	@include adaptive-font-size-up(15, 600, 767);
+	@include adaptive-font-size-up(12, 768, 991);
+	@include adaptive-font-size-up(15, 992, 1279);
+	@include adaptive-font-size-up(18, 1280, 1440);
+	@include adaptive-font-size-down(21, 1441, 1920);
+}
+
+.header {
+	grid-template-columns: 1fr 5em 1fr;
+
+	@include adaptive-set-all-media(
+		(
+			'xs': (
+				padding-top: 15,
+				padding-bottom: 15
+			),
+			'sm': (
+				padding-top: 15,
+				padding-bottom: 15
+			),
+			'md': (
+				padding-top: 14,
+				padding-bottom: 14
+			),
+			'lg': (
+				padding-top: 16,
+				padding-bottom: 16
+			),
+			'xl': (
+				padding-top: 20,
+				padding-bottom: 20
+			),
+			'2xl': (
+				padding-top: 20,
+				padding-bottom: 20
+			)
+		)
+	);
+
+	@media (min-width: 768px) {
+		grid-template-columns: 1fr 5.8333em 1fr;
+	}
+	@media (min-width: 1440px) {
+		grid-template-columns: 1fr 6.4285em 1fr;
+	}
+}
+
+.leftActions {
+	gap: 1.6666em;
+
+	@media (min-width: 1440px) {
+		gap: 2.8571em;
+	}
+}
+
+.rightActions {
+	gap: 1.7341em;
+
+	@media (min-width: 1440px) {
+		gap: 1.4285em;
+	}
+}
+
+.listButtons {
+	gap: 0.65em;
+	padding-right: 0.619em;
+
+	@media (min-width: 768px) {
+		gap: 1.0952em;
+	}
+}
+
+.listButtonsIcon {
+	height: 1.2666em;
+	width: 1.4666em;
+	@media (min-width: 768px) {
+		height: 1.35em;
+		width: 1.4333em;
+	}
+	@media (min-width: 1440px) {
+		height: 1.5238em;
+		width: 1.7619em;
+	}
+}
+
+.listButtonsNum {
+	width: 2em;
+	height: 2em;
+	top: -0.3571em;
+	right: -1em;
+	font-size: 0.6em;
+	@media (min-width: 600px) {
+		font-size: 0.6666em;
+	}
+}
+
+.burger {
+	gap: 0.6666em;
+	@media (min-width: 768px) {
+		gap: 0.42em;
+	}
+	@media (min-width: 1440px) {
+		gap: 0.5714em;
+	}
+}

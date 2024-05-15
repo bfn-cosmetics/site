@@ -1,0 +1,78 @@
+@use 'sass:math';
+@use 'sass:list';
+@use 'sass:map';
+
+@mixin adaptive-font-size-up($idealSize, $minMedia, $maxMedia) {
+	$setValues: ();
+	$coff: math.div($idealSize, $minMedia);
+
+	@for $currentMedia from $minMedia through $maxMedia {
+		$currentSize: $coff * $currentMedia;
+		@if (math.round($currentSize * 100) == $currentSize * 100) and not
+			list.index($setValues, math.round($currentSize))
+		{
+			$setValues: list.append($setValues, math.round($currentSize));
+
+			@media (min-width: #{$currentMedia}px) {
+				font-size: #{math.round($currentSize)}px;
+			}
+		}
+	}
+}
+
+@mixin adaptive-font-size-down($idealSize, $minMedia, $maxMedia) {
+	$setValues: ();
+	$coff: math.div($idealSize, $maxMedia);
+
+	@for $currentMedia from $minMedia through $maxMedia {
+		$currentSize: $coff * $currentMedia;
+		@if (math.round($currentSize * 100) == $currentSize * 100) and not
+			list.index($setValues, math.round($currentSize))
+		{
+			$setValues: list.append($setValues, math.round($currentSize));
+
+			@media (min-width: #{$currentMedia}px) {
+				font-size: #{math.round($currentSize)}px;
+			}
+		}
+	}
+}
+
+@mixin adaptive-set-all-media($mediaCss) {
+	$mediaQueries: (
+		'xs': 0,
+		'sm': 600,
+		'md': 768,
+		'lg': 992,
+		'xl': 1280,
+		'2xl': 1440
+	);
+
+	@each $name, $px in $mediaQueries {
+		@if map.get($mediaCss, $name) {
+			$css: map.get($mediaCss, $name);
+			$newCss: ();
+			@each $property, $value in $css {
+				$newCss: map.set(
+					$newCss,
+					$property,
+					calc(#{$value}vw / var(--coff-#{$name}))
+				);
+			}
+
+			@if $px == 0 {
+				@include unwrap-css-map($newCss);
+			} @else {
+				@media (min-width: #{$px}px) {
+					@include unwrap-css-map($newCss);
+				}
+			}
+		}
+	}
+}
+
+@mixin unwrap-css-map($css) {
+	@each $property, $value in $css {
+		#{$property}: $value;
+	}
+}

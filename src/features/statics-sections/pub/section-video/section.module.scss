@@ -1,0 +1,111 @@
+@import '@shared/lib/mixins';
+
+.section {
+	padding-top: 5%;
+	@media (min-width: 768px) {
+		padding-top: 2.6562%;
+	}
+}
+
+.title {
+	margin-left: -0.095em;
+	margin-top: 0.095em;
+}
+
+.titleSign {
+	width: 6.7428em;
+	height: 1.0428em;
+	margin-left: 3.93em;
+	margin-top: -0.63em;
+}
+
+.titleSignTable {
+	width: 11.8666em;
+	height: 2.6666em;
+	margin-top: -0.3em;
+	margin-bottom: -0.3em;
+}
+
+.titleSignMob {
+	width: 8.18em;
+	height: 2.1em;
+	margin-top: -0.2em;
+}
+
+.leaf7 {
+	top: 0.7vw;
+	left: 4vw;
+	z-index: -1;
+
+	@media (min-width: 768px) {
+		top: -4.3vw;
+		left: 0vw;
+	}
+
+	@media (min-width: 992px) {
+		top: -5.7vw;
+		left: 7vw;
+	}
+
+	@include adaptive-set-all-media(
+		(
+			'xs': (
+				width: 100
+			),
+			'sm': (
+				width: 128
+			),
+			'md': (
+				width: 152
+			),
+			'lg': (
+				'width': 180
+			),
+			'xl': (
+				'width': 220
+			),
+			'2xl': (
+				'width': 269
+			)
+		)
+	);
+}
+
+.content {
+	@include adaptive-font-size-down(16, 1, 480);
+	@include adaptive-font-size-up(17, 481, 599);
+	@include adaptive-font-size-up(18, 600, 767);
+	@include adaptive-font-size-up(16, 768, 991);
+	@include adaptive-font-size-up(17, 992, 1279);
+	@include adaptive-font-size-up(18, 1280, 1440);
+	@include adaptive-font-size-down(21, 1441, 1920);
+
+	@include adaptive-set-all-media(
+		(
+			'xl': (
+				margin-top: -65
+			),
+			'2xl': (
+				margin-top: -125
+			)
+		)
+	);
+
+	@media (min-width: 992px) {
+		grid-template-columns: 1fr 34.375vw 1fr;
+	}
+}
+
+.contentText1 {
+	margin-right: 1em;
+	@include adaptive-set-all-media(
+		(
+			'xl': (
+				margin-top: 80
+			),
+			'2xl': (
+				margin-top: 150
+			)
+		)
+	);
+}

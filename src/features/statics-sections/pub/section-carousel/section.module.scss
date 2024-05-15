@@ -1,0 +1,95 @@
+@import '@shared/lib/mixins';
+
+.slide {
+	flex: 0 0 100%;
+	min-width: 0;
+	width: 100%;
+	aspect-ratio: 480 / 865;
+
+	@media (min-width: 600px) {
+		aspect-ratio: 768 / 432;
+	}
+
+	@media (min-width: 1280px) {
+		aspect-ratio: 1920 / 835;
+	}
+}
+
+.dots {
+	gap: calc(4vw / var(--coff-2xl));
+
+	@include adaptive-set-all-media(
+		(
+			'xs': (
+				bottom: 21
+			),
+			'md': (
+				bottom: 14
+			),
+			'lg': (
+				bottom: 18
+			),
+			'xl': (
+				bottom: 26
+			),
+			'2xl': (
+				bottom: 37
+			)
+		)
+	);
+}
+
+.buttonDot {
+	@include adaptive-set-all-media(
+		(
+			'xs': (
+				width: 35,
+				height: 35
+			),
+			'sm': (
+				width: 30,
+				height: 30
+			),
+			'md': (
+				width: 20,
+				height: 20
+			),
+			'lg': (
+				width: 25,
+				height: 25
+			),
+			'xl': (
+				width: 30,
+				height: 30
+			),
+			'2xl': (
+				width: 35,
+				height: 35
+			)
+		)
+	);
+	svg {
+		width: 100%;
+		height: 100%;
+	}
+	svg circle:first-child {
+		opacity: 0;
+		transition: opacity 225ms;
+	}
+}
+
+.buttonDotActive {
+	svg circle:first-child {
+		opacity: 1;
+		animation: start-progress 6.25s;
+	}
+}
+
+@keyframes start-progress {
+	0% {
+		stroke-dashoffset: 106.76;
+	}
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
