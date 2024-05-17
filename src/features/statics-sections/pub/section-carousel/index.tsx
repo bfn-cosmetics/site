@@ -31,7 +31,7 @@ export function SectionCarousel() {
 						<picture className='absolute left-0 top-0 h-full w-full'>
 							<source
 								srcSet='/assets/home/slider/slide-1-comp.png'
-								media='(min-width: 1280px)'
+								media='(min-width: 1200px)'
 							/>
 							<source
 								srcSet='/assets/home/slider/slide-1-tb.png'
@@ -48,7 +48,7 @@ export function SectionCarousel() {
 						<picture className='absolute left-0 top-0 h-full w-full'>
 							<source
 								srcSet='/assets/home/slider/slide-1-comp.png'
-								media='(min-width: 1280px)'
+								media='(min-width: 1200px)'
 							/>
 							<source
 								srcSet='/assets/home/slider/slide-1-tb.png'
@@ -65,7 +65,7 @@ export function SectionCarousel() {
 						<picture className='absolute left-0 top-0 h-full w-full'>
 							<source
 								srcSet='/assets/home/slider/slide-1-comp.png'
-								media='(min-width: 1280px)'
+								media='(min-width: 1200px)'
 							/>
 							<source
 								srcSet='/assets/home/slider/slide-1-tb.png'
