@@ -61,12 +61,7 @@ export function SectionVideo() {
 					</div>
 					<div className='mb-[4.0364vw] aspect-[420/295] self-center bg-default-words sm:aspect-[708/400] lg:mb-0 lg:aspect-[660/675]'></div>
 					<div className='order-1 flex flex-col'>
-						<div
-							className={cn(
-								styles.test,
-								'mt-[.4em] lg:ml-[1.6666em] lg:mt-auto'
-							)}
-						>
+						<div className={cn('mt-[.4em] lg:ml-[1.6666em] lg:mt-auto')}>
 							Вместо обычной эмульсионной основы, мы&nbsp;используем уникальную
 							ламеллярную дерма-мембранную структуру DMS&nbsp;- липидную
 							композицию, сходную по&nbsp;составу с&nbsp;роговым слоем кожи.

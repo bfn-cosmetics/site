@@ -36,10 +36,10 @@
 }
 
 .titleSpan1 {
-	margin-left: -0.1em;
+	margin-left: -0.0928em;
 	margin-bottom: 0.19em;
 	@media (min-width: #{$_media-table}px) {
-		margin-left: -0.06em;
+		margin-left: -0.0928em;
 		margin-bottom: 0;
 	}
 	@media (min-width: #{$_media-table-desk}px) {
@@ -244,6 +244,7 @@
 	min-width: 0;
 	flex-basis: 64%;
 	margin-left: 7.2vw;
+	line-height: 1.4;
 	@media (min-width: #{$_media-table}px) {
 		margin-left: 3.90625vw;
 		flex-basis: calc(50% - 3.90625vw);

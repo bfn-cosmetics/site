@@ -99,14 +99,3 @@
 		)
 	);
 }
-
-.test {
-	@include adaptive-font-sizes(
-		(
-			'phone': 12,
-			'table': 14,
-			'table-desk': 12,
-			'desk': 16
-		)
-	);
-}
