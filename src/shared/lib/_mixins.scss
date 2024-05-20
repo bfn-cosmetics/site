@@ -80,21 +80,33 @@ $_media-desk: 1200;
 @mixin adaptive-font-sizes($sizes) {
 	// phone
 	@include adaptive-font-size-down(map.get($sizes, 'phone'), 1, 479);
-	@include adaptive-font-size-up(map.get($sizes, 'phone'), 480, 599);
+	@include adaptive-font-size-up(
+		map.get($sizes, 'phone'),
+		480,
+		$_media-table - 1
+	);
 	// table
 	@include adaptive-font-size-down(
 		map.get($sizes, 'table'),
-		600,
+		$_media-table,
 		767,
 		'min-include'
 	);
-	@include adaptive-font-size-up(map.get($sizes, 'table'), 768, 991);
+	@include adaptive-font-size-up(
+		map.get($sizes, 'table'),
+		768,
+		$_media-table-desk - 1
+	);
 	// table-desk
-	@include adaptive-font-size-up(map.get($sizes, 'table-desk'), 992, 1279);
+	@include adaptive-font-size-up(
+		map.get($sizes, 'table-desk'),
+		$_media-table-desk,
+		$_media-desk - 1
+	);
 	// desk
 	@include adaptive-font-size-down(
 		map.get($sizes, 'desk'),
-		1200,
+		$_media-desk,
 		1920,
 		'min-include'
 	);
