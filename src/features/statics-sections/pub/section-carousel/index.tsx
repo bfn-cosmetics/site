@@ -35,7 +35,7 @@ export function SectionCarousel() {
 							/>
 							<source
 								srcSet='/assets/home/slider/slide-1-tb.png'
-								media='(min-width: 600px)'
+								media='(min-width: 576px)'
 							/>
 							<img
 								src='/assets/home/slider/slide-1-phone.png'
@@ -52,7 +52,7 @@ export function SectionCarousel() {
 							/>
 							<source
 								srcSet='/assets/home/slider/slide-1-tb.png'
-								media='(min-width: 600px)'
+								media='(min-width: 576px)'
 							/>
 							<img
 								src='/assets/home/slider/slide-1-phone.png'
@@ -69,7 +69,7 @@ export function SectionCarousel() {
 							/>
 							<source
 								srcSet='/assets/home/slider/slide-1-tb.png'
-								media='(min-width: 600px)'
+								media='(min-width: 576px)'
 							/>
 							<img
 								src='/assets/home/slider/slide-1-phone.png'
