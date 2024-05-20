@@ -10,15 +10,21 @@ $_media-desk: 1200;
 	$setValues: ();
 	$coff: math.div($idealSize, $minMedia);
 
-	@for $currentMedia from $minMedia through $maxMedia {
-		$currentSize: math.max($coff * $currentMedia, 12);
-		@if not list.index($setValues, math.ceil($currentSize)) {
-			$setValues: list.append($setValues, math.ceil($currentSize));
+	// округление
+	// @for $currentMedia from $minMedia through $maxMedia {
+	// 	$currentSize: math.max($coff * $currentMedia, 12);
+	// 	@if not list.index($setValues, math.ceil($currentSize)) {
+	// 		$setValues: list.append($setValues, math.ceil($currentSize));
 
-			@media (min-width: #{$currentMedia}px) {
-				font-size: #{math.ceil($currentSize)}px;
-			}
-		}
+	// 		@media (min-width: #{$currentMedia}px) {
+	// 			font-size: #{math.ceil($currentSize)}px;
+	// 		}
+	// 	}
+	// }
+
+	// чистые
+	@media (min-width: #{$minMedia}px) {
+		font-size: calc(#{$idealSize}vw / #{math.div($minMedia, 100)});
 	}
 }
 
@@ -26,17 +32,22 @@ $_media-desk: 1200;
 	$setValues: ();
 	$coff: math.div($idealSize, $maxMedia);
 
-	@for $currentMedia from $minMedia through $maxMedia {
-		$currentSize: math.max($coff * $currentMedia, 12);
-		@if (($mode == 'min-include') and ($currentMedia == $minMedia)) or not
-			list.index($setValues, math.ceil($currentSize))
-		{
-			$setValues: list.append($setValues, math.ceil($currentSize));
+	// @for $currentMedia from $minMedia through $maxMedia {
+	// 	$currentSize: math.max($coff * $currentMedia, 12);
+	// 	@if (($mode == 'min-include') and ($currentMedia == $minMedia)) or not
+	// 		list.index($setValues, math.ceil($currentSize))
+	// 	{
+	// 		$setValues: list.append($setValues, math.ceil($currentSize));
 
-			@media (min-width: #{$currentMedia}px) {
-				font-size: #{math.ceil($currentSize)}px;
-			}
-		}
+	// 		@media (min-width: #{$currentMedia}px) {
+	// 			font-size: #{math.ceil($currentSize)}px;
+	// 		}
+	// 	}
+	// }
+
+	// чистые
+	@media (min-width: #{$minMedia}px) {
+		font-size: calc(#{$idealSize}vw / #{math.div($maxMedia, 100)});
 	}
 }
 
