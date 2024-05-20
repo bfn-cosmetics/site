@@ -13,7 +13,7 @@ export function SectionAdvantages() {
 		{
 			active: true,
 			breakpoints: {
-				'(min-width: 992px)': { active: false }
+				'(min-width: 960px)': { active: false }
 			}
 		},
 		[]
