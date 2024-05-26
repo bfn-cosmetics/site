@@ -27,7 +27,7 @@
 	}
 }
 
-.titleSpan0 {
+.title > span:nth-child(1) {
 	margin-left: -0.0928em;
 	margin-bottom: 0.14em;
 	@media (min-width: #{$_media-table-desk}px) {
@@ -35,7 +35,7 @@
 	}
 }
 
-.titleSpan1 {
+.title > span:nth-child(3) {
 	margin-left: -0.0928em;
 	margin-bottom: 0.19em;
 	@media (min-width: #{$_media-table}px) {
@@ -48,7 +48,7 @@
 	}
 }
 
-.titleSpan2 {
+.title > span:nth-child(4) {
 	margin-left: 2.52em;
 	@media (min-width: #{$_media-table}px) {
 		margin-left: 0.21em;
@@ -59,7 +59,7 @@
 	}
 }
 
-.titleBr {
+.title > span:nth-child(2) {
 	flex: 0 0 100%;
 	@media (min-width: #{$_media-table-desk}px) {
 		display: none;

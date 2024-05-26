@@ -5,6 +5,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 
 import { cn } from '@/shared/lib/class-names'
 import { useDotsButton } from '@/shared/lib/embla'
+import { MEDIA_DESK, MEDIA_TABLE } from '@/shared/modal/constant.media'
 
 import styles from './section.module.scss'
 
@@ -31,11 +32,11 @@ export function SectionCarousel() {
 						<picture className='absolute left-0 top-0 h-full w-full'>
 							<source
 								srcSet='/assets/home/slider/slide-1-comp.png'
-								media='(min-width: 1200px)'
+								media={`(min-width: ${MEDIA_DESK}px)`}
 							/>
 							<source
 								srcSet='/assets/home/slider/slide-1-tb.png'
-								media='(min-width: 576px)'
+								media={`(min-width: ${MEDIA_TABLE}px)`}
 							/>
 							<img
 								src='/assets/home/slider/slide-1-phone.png'
@@ -48,11 +49,11 @@ export function SectionCarousel() {
 						<picture className='absolute left-0 top-0 h-full w-full'>
 							<source
 								srcSet='/assets/home/slider/slide-1-comp.png'
-								media='(min-width: 1200px)'
+								media={`(min-width: ${MEDIA_DESK}px)`}
 							/>
 							<source
 								srcSet='/assets/home/slider/slide-1-tb.png'
-								media='(min-width: 576px)'
+								media={`(min-width: ${MEDIA_TABLE}px)`}
 							/>
 							<img
 								src='/assets/home/slider/slide-1-phone.png'
@@ -65,11 +66,11 @@ export function SectionCarousel() {
 						<picture className='absolute left-0 top-0 h-full w-full'>
 							<source
 								srcSet='/assets/home/slider/slide-1-comp.png'
-								media='(min-width: 1200px)'
+								media={`(min-width: ${MEDIA_DESK}px)`}
 							/>
 							<source
 								srcSet='/assets/home/slider/slide-1-tb.png'
-								media='(min-width: 576px)'
+								media={`(min-width: ${MEDIA_TABLE}px)`}
 							/>
 							<img
 								src='/assets/home/slider/slide-1-phone.png'

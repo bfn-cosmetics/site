@@ -1,5 +1,6 @@
 import { cn } from '@/shared/lib/class-names'
 import { Image } from '@/shared/lib/next'
+import { SectionTitle } from '@/shared/ui/section-title'
 
 import styles from './section.module.scss'
 
@@ -7,36 +8,26 @@ export function SectionVideo() {
 	return (
 		<section className={cn(styles.section, 'relative')}>
 			<div className='container'>
-				<h2
-					className={cn(
-						styles.title,
-						'title-section',
-						'pointer-events-none flex flex-col items-start'
-					)}
-				>
-					<span>
-						Корнеотерапия
-						<svg viewBox='0 0 1200 140'>
-							<text y='119'>корнеотерапия</text>
-						</svg>
-					</span>
-				</h2>
+				<SectionTitle
+					className={styles.title}
+					words={[{ word: 'корнеотерапия', media: 'xl', stroke: true }]}
+				/>
 				<SVGSign
 					className={cn(
 						styles.titleSign,
-						'title-section pointer-events-none relative z-[1] hidden lg:block'
+						'title-section-sizes pointer-events-none relative z-[1] hidden lg:block'
 					)}
 				/>
 				<SVGSignTable
 					className={cn(
 						styles.titleSignTable,
-						'title-section pointer-events-none relative z-[1] hidden sm:block lg:hidden'
+						'title-section-sizes pointer-events-none relative z-[1] hidden sm:block lg:hidden'
 					)}
 				/>
 				<SVGSignMob
 					className={cn(
 						styles.titleSignMob,
-						'title-section pointer-events-none relative z-[1] sm:hidden'
+						'title-section-sizes pointer-events-none relative z-[1] sm:hidden'
 					)}
 				/>
 				<div className={cn(styles.content, 'grid leading-[1.4]')}>

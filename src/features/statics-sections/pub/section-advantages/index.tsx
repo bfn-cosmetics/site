@@ -5,19 +5,20 @@ import useEmblaCarousel from 'embla-carousel-react'
 import { cn } from '@/shared/lib/class-names'
 import { usePrevNextButtons } from '@/shared/lib/embla'
 import { Image } from '@/shared/lib/next'
+import { MEDIA_TABLE_DESK } from '@/shared/modal/constant.media'
+import { SectionTitle } from '@/shared/ui/section-title'
 
 import styles from './section.module.scss'
 
+const breakpoints: Record<string, any> = {}
+breakpoints[`(min-width: ${MEDIA_TABLE_DESK}px)`] = { active: false }
+const OPTIONS: Record<string, any> = {
+	active: true,
+	breakpoints
+}
+
 export function SectionAdvantages() {
-	const [emblaRef, emblaApi] = useEmblaCarousel(
-		{
-			active: true,
-			breakpoints: {
-				'(min-width: 960px)': { active: false }
-			}
-		},
-		[]
-	)
+	const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS, [])
 
 	const { onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi)
 
@@ -26,32 +27,23 @@ export function SectionAdvantages() {
 			<div className='container'>
 				<SVGSign
 					className={cn(
-						'title-section',
+						'title-section-sizes',
 						styles.titleSign,
 						'pointer-events-none text-accent'
 					)}
 				/>
-				<h2
+				<SectionTitle
 					className={cn(
-						'title-section',
-						'pointer-events-none relative flex flex-col flex-wrap items-start sm:flex-row lg:flex-col'
+						styles.title,
+						'flex-wrap items-start sm:flex-row lg:flex-col'
 					)}
-				>
-					<span className={cn(styles.titleSpan0)}>Повторяет</span>
-					<span className={cn(styles.titleBr)} />
-					<span className={cn(styles.titleSpan1)}>
-						cтруктуру
-						<svg viewBox='0 0 783 140'>
-							<text y='119'>cтруктуру</text>
-						</svg>
-					</span>{' '}
-					<span className={cn(styles.titleSpan2)}>
-						кожи
-						<svg viewBox='0 0 427 140'>
-							<text y='119'>кожи</text>
-						</svg>
-					</span>
-				</h2>
+					words={[
+						{ word: 'повторяет' },
+						{ word: '' },
+						{ word: 'структуру', stroke: true, media: 'lg' },
+						{ word: 'кожи', stroke: true, media: 'lg' }
+					]}
+				/>
 				<div
 					className='embla !overflow-visible sm:!overflow-hidden lg:!overflow-visible'
 					ref={emblaRef}

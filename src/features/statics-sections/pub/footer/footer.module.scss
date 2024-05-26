@@ -1,0 +1,142 @@
+@import '@shared/lib/mixins';
+
+.footer {
+	color: #fff;
+	background: #2f3338;
+	display: flex;
+
+	@include adaptive-set-all-media(
+		(
+			'phone': (
+				min-height: 490
+			),
+			'table': (
+				min-height: 505
+			),
+			'desk': (
+				min-height: 745
+			)
+		)
+	);
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.contacts {
+	margin-top: auto;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 300;
+	@include adaptive-font-sizes(
+		(
+			'phone': 28,
+			'table': 40,
+			'table-desk': 50,
+			'desk': 64
+		)
+	);
+}
+
+.info {
+	margin-top: auto;
+	margin-bottom: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@media (min-width: #{$_media-desk}px) {
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+	@include adaptive-font-sizes(
+		(
+			'phone': 14,
+			'table': 16,
+			'desk': 21
+		)
+	);
+	& > * {
+		flex: 1;
+	}
+	& > *:first-child {
+		text-align: center;
+		order: 1;
+
+		@media (min-width: #{$_media-desk}px) {
+			text-align: left;
+			order: 0;
+		}
+	}
+	& > *:last-child {
+		text-align: center;
+		@media (min-width: #{$_media-desk}px) {
+			text-align: right;
+		}
+	}
+}
+
+.infoText {
+	div + div {
+		margin-top: 1em;
+		@media (min-width: #{$_media-desk}px) {
+			margin-top: 0.5em;
+		}
+	}
+}
+
+.infoLinks {
+	display: flex;
+	justify-content: center;
+	color: #cb9e76;
+	order: -1;
+	@media (min-width: #{$_media-desk}px) {
+		order: 0;
+	}
+	@include adaptive-set-all-media(
+		(
+			'phone': (
+				gap: 22,
+				margin-bottom: 40
+			),
+			'table': (
+				gap: 24,
+				margin-bottom: 40
+			),
+			'table-desk': (
+				gap: 24
+			),
+			'desk': (
+				gap: 20,
+				margin-bottom: 0
+			)
+		)
+	);
+	svg {
+		@include adaptive-set-all-media(
+			(
+				'phone': (
+					height: 120,
+					width: 120
+				),
+				'table': (
+					height: 150,
+					width: 150
+				),
+				'table-desk': (
+					height: 150,
+					width: 150
+				),
+				'desk': (
+					height: 164,
+					width: 164
+				)
+			)
+		);
+	}
+}
+
+.infoLink {
+}
