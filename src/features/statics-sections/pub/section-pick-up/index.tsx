@@ -1,6 +1,5 @@
-import Image from 'next/image'
-
 import { cn } from '@/shared/lib/class-names'
+import { Image } from '@/shared/lib/next'
 import { SectionTitle } from '@/shared/ui/section-title'
 
 import styles from './section.module.scss'
