@@ -312,6 +312,29 @@
 	width: 4.8095em;
 	height: 4.8095em;
 	transition: 600ms ease-in-out;
+
+	svg {
+		@include adaptive-set-all-media(
+			(
+				'phone': (
+					width: 18,
+					height: 18
+				),
+				'table': (
+					width: 19,
+					height: 19
+				),
+				'table-desk': (
+					width: 20,
+					height: 20
+				),
+				'desk': (
+					width: 21,
+					height: 21
+				)
+			)
+		);
+	}
 }
 
 .plate1 {
