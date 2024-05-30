@@ -13,7 +13,7 @@ export function Footer() {
 				<div className={styles.info}>
 					<div className={styles.infoText}>
 						<div>Правовая информация</div>
-						<div>2015 - 2022 © BFN. Все права защищены.</div>
+						<div>2014 - 2024 © BFN. Все права защищены.</div>
 					</div>
 					<div className={styles.infoLinks}>
 						<a
