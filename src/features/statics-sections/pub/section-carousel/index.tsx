@@ -31,15 +31,15 @@ export function SectionCarousel() {
 					<div className={cn(styles.slide, 'pointer-events-none relative')}>
 						<picture className='absolute left-0 top-0 h-full w-full'>
 							<source
-								srcSet='/site/assets/home/slider/slide-1-comp.png'
+								srcSet='https://bfn-cosmetics.github.io/site/assets/home/slider/slide-1-comp.png'
 								media={`(min-width: ${MEDIA_DESK}px)`}
 							/>
 							<source
-								srcSet='/site/assets/home/slider/slide-1-tb.png'
+								srcSet='https://bfn-cosmetics.github.io/site/assets/home/slider/slide-1-tb.png'
 								media={`(min-width: ${MEDIA_TABLE}px)`}
 							/>
 							<img
-								src='/site/assets/home/slider/slide-1-phone.png'
+								src='https://bfn-cosmetics.github.io/site/assets/home/slider/slide-1-phone.png'
 								alt=''
 								className='h-full w-full object-cover'
 							/>
@@ -48,15 +48,15 @@ export function SectionCarousel() {
 					<div className={cn(styles.slide, 'pointer-events-none relative')}>
 						<picture className='absolute left-0 top-0 h-full w-full'>
 							<source
-								srcSet='/site/assets/home/slider/slide-1-comp.png'
+								srcSet='https://bfn-cosmetics.github.io/site/assets/home/slider/slide-1-comp.png'
 								media={`(min-width: ${MEDIA_DESK}px)`}
 							/>
 							<source
-								srcSet='/site/assets/home/slider/slide-1-tb.png'
+								srcSet='https://bfn-cosmetics.github.io/site/assets/home/slider/slide-1-tb.png'
 								media={`(min-width: ${MEDIA_TABLE}px)`}
 							/>
 							<img
-								src='/site/assets/home/slider/slide-1-phone.png'
+								src='https://bfn-cosmetics.github.io/site/assets/home/slider/slide-1-phone.png'
 								alt=''
 								className='h-full w-full object-cover'
 							/>
@@ -65,15 +65,15 @@ export function SectionCarousel() {
 					<div className={cn(styles.slide, 'pointer-events-none relative')}>
 						<picture className='absolute left-0 top-0 h-full w-full'>
 							<source
-								srcSet='/site/assets/home/slider/slide-1-comp.png'
+								srcSet='https://bfn-cosmetics.github.io/site/assets/home/slider/slide-1-comp.png'
 								media={`(min-width: ${MEDIA_DESK}px)`}
 							/>
 							<source
-								srcSet='/site/assets/home/slider/slide-1-tb.png'
+								srcSet='https://bfn-cosmetics.github.io/site/assets/home/slider/slide-1-tb.png'
 								media={`(min-width: ${MEDIA_TABLE}px)`}
 							/>
 							<img
-								src='/site/assets/home/slider/slide-1-phone.png'
+								src='https://bfn-cosmetics.github.io/site/assets/home/slider/slide-1-phone.png'
 								alt=''
 								className='h-full w-full object-cover'
 							/>
