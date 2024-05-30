@@ -199,8 +199,8 @@
 	}
 	@media (min-width: #{$_media-table-desk}px) {
 		right: auto;
-		top: -11vw;
-		left: 5.4vw;
+		top: -15.2vw;
+		left: 5.1vw;
 	}
 	@include adaptive-set-all-media(
 		(
@@ -230,7 +230,7 @@
 	}
 	@media (min-width: #{$_media-table-desk}px) {
 		right: auto;
-		top: -12vw;
+		top: -15vw;
 		left: 9vw;
 	}
 	@include adaptive-set-all-media(
@@ -264,7 +264,7 @@
 		transform: rotate(0deg);
 		right: auto;
 		left: 2vw;
-		top: -6vw;
+		top: -10vw;
 	}
 	@include adaptive-set-all-media(
 		(
