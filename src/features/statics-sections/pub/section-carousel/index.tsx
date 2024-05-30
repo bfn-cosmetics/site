@@ -31,7 +31,7 @@ export function SectionCarousel() {
 					<div className={cn(styles.slide, 'pointer-events-none relative')}>
 						<picture className='absolute left-0 top-0 h-full w-full'>
 							<source
-								srcSet='https://bfn-cosmetics.github.io/site/assets/home/slider/slide-1-comp.png'
+								srcSet='https://bfn-cosmetics.github.io/site/assets/home/slider/slide-1-comp.png, https://bfn-cosmetics.github.io/site/assets/home/slider/slide-1-comp.png x2, https://bfn-cosmetics.github.io/site/assets/home/slider/slide-1-comp.png x3'
 								media={`(min-width: ${MEDIA_DESK}px)`}
 							/>
 							<source
@@ -48,7 +48,7 @@ export function SectionCarousel() {
 					<div className={cn(styles.slide, 'pointer-events-none relative')}>
 						<picture className='absolute left-0 top-0 h-full w-full'>
 							<source
-								srcSet='https://bfn-cosmetics.github.io/site/assets/home/slider/slide-1-comp.png'
+								srcSet='https://bfn-cosmetics.github.io/site/assets/home/slider/slide-1-comp.png, https://bfn-cosmetics.github.io/site/assets/home/slider/slide-1-comp.png x2, https://bfn-cosmetics.github.io/site/assets/home/slider/slide-1-comp.png x3'
 								media={`(min-width: ${MEDIA_DESK}px)`}
 							/>
 							<source
@@ -65,7 +65,7 @@ export function SectionCarousel() {
 					<div className={cn(styles.slide, 'pointer-events-none relative')}>
 						<picture className='absolute left-0 top-0 h-full w-full'>
 							<source
-								srcSet='https://bfn-cosmetics.github.io/site/assets/home/slider/slide-1-comp.png'
+								srcSet='https://bfn-cosmetics.github.io/site/assets/home/slider/slide-1-comp.png, https://bfn-cosmetics.github.io/site/assets/home/slider/slide-1-comp.png x2, https://bfn-cosmetics.github.io/site/assets/home/slider/slide-1-comp.png x3'
 								media={`(min-width: ${MEDIA_DESK}px)`}
 							/>
 							<source
