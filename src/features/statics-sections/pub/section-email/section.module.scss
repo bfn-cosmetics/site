@@ -82,7 +82,7 @@
 			),
 			'desk': (
 				min-height: 170,
-				padding-bottom: 30
+				padding-bottom: 36
 			)
 		)
 	);
@@ -169,6 +169,7 @@
 	height: 1em;
 	margin-right: 0.5em;
 	border: 1px solid currentColor;
+	margin-top: -0.1em;
 }
 
 .button {
@@ -177,6 +178,9 @@
 	margin-left: auto;
 	@media (min-width: #{$_media-table-desk}px) {
 		margin-left: 0;
+	}
+	@media (min-width: #{$_media-desk}px) {
+		margin-left: -0.4em;
 	}
 	@include adaptive-font-sizes(
 		(
