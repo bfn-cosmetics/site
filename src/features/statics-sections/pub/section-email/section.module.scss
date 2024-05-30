@@ -30,6 +30,7 @@
 	span {
 		display: block;
 		position: relative;
+		font-weight: 300;
 	}
 	span:nth-child(2) {
 		margin-top: 1.7em;
@@ -51,6 +52,8 @@
 		left: calc(100% - 5.2em);
 		font-family: var(--font-accent);
 		text-transform: lowercase;
+		font-style: normal;
+		font-weight: 400;
 		@media (min-width: #{$_media-table}px) {
 			top: 0.1em;
 			left: calc(100% - 0.8em);
