@@ -18,7 +18,7 @@ export function Header() {
 			>
 				<div className={cn(styles.leftActions, 'flex items-center')}>
 					<button className={cn(styles.burger, 'flex items-center uppercase')}>
-						<SVGBurger className={cn('h-[.76em] w-[1.19em]')} />
+						<SVGBurger className={cn('h-[.90em] w-[1.19em]')} />
 						Меню
 					</button>
 					<Link

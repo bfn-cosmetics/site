@@ -1,6 +1,7 @@
 'use client'
 
 import useEmblaCarousel from 'embla-carousel-react'
+import Image from 'next/image'
 
 import { cn } from '@/shared/lib/class-names'
 import { usePrevNextButtons } from '@/shared/lib/embla'
@@ -37,7 +38,14 @@ export function SectionProducts() {
 				>
 					<div className={cn(styles.slideWrap, 'embla__container')}>
 						<div className={cn(styles.slide)}>
-							<div className='aspect-[410/457] bg-slate-200'></div>
+							<div className='relative aspect-[410/457]'>
+								<Image
+									src='/assets/home/products/1.png'
+									alt=''
+									fill
+									className='object-cover'
+								/>
+							</div>
 							<div className={cn(styles.hr, 'text-accent')} />
 							<div className={cn(styles.text)}>Очищение</div>
 						</div>

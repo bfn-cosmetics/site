@@ -1,4 +1,5 @@
 import { cn } from '@/shared/lib/class-names'
+import { Image } from '@/shared/lib/next'
 
 import styles from './section.module.scss'
 
@@ -25,10 +26,16 @@ export function SectionHero() {
 					ингредиентов
 				</div>
 			</div>
-			<video
+			{/* <video
 				// src='http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
 				className='absolute left-0 top-0 -z-[1] h-full w-full object-cover'
-			></video>
+			></video> */}
+			<Image
+				src='/assets/home/section-1.png'
+				alt=''
+				fill
+				className='-z-[1] object-cover'
+			/>
 			<button className={cn(styles.buttonPlayer, 'text-accent')}>
 				<SVGPlay className='h-full w-full' />
 			</button>
