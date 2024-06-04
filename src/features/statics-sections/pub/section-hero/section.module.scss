@@ -1,16 +1,17 @@
 @import '@shared/lib/mixins';
 
 .section {
-	aspect-ratio: 480 / 926;
+	// aspect-ratio: 480 / 926;
+	height: 100vh;
 	padding-bottom: 9.583%;
 
 	@media (min-width: #{$_media-table}px) {
-		aspect-ratio: 768 / 432;
+		// aspect-ratio: 768 / 432;
 		padding-bottom: 2.6041%;
 	}
 
 	@media (min-width: #{$_media-desk}px) {
-		aspect-ratio: 1920 / 940;
+		// aspect-ratio: 1920 / 940;
 		padding-bottom: 2.6565%;
 	}
 }
