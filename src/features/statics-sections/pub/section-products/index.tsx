@@ -57,12 +57,12 @@ export function SectionProducts() {
 						<div className={cn(styles.slide)}>
 							<div className='aspect-[410/457] bg-slate-200'></div>
 							<div className={cn(styles.hr, 'text-accent')} />
-							<div className={cn(styles.text)}>Сыворотки</div>
+							<div className={cn(styles.text)}>Бустеры/Концентраты</div>
 						</div>
 						<div className={cn(styles.slide)}>
 							<div className='aspect-[410/457] bg-slate-200'></div>
 							<div className={cn(styles.hr, 'text-accent')} />
-							<div className={cn(styles.text)}>Бустеры/Концентраты</div>
+							<div className={cn(styles.text)}>Сыворотки</div>
 						</div>
 						<div className={cn(styles.slide)}>
 							<div className='aspect-[410/457] bg-slate-200'></div>
