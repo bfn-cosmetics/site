@@ -31,7 +31,7 @@
 }
 
 .text {
-	margin-top: 0.45em;
+	margin-top: 0.5em;
 	max-width: 20em;
 	@include adaptive-font-sizes(
 		(
@@ -42,7 +42,7 @@
 		)
 	);
 	@media (min-width: #{$_media-table}px) {
-		margin-top: -2em;
+		margin-top: -2.05em;
 		max-width: 18.3em;
 	}
 	@media (min-width: #{$_media-table-desk}px) {
