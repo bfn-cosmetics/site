@@ -3,7 +3,7 @@
 @use 'sass:map';
 
 $_media-table: 576;
-$_media-table-desk: 960;
+$_media-table-desk: 864;
 $_media-desk: 1200;
 
 @mixin adaptive-font-size-up($idealSize, $minMedia, $maxMedia) {
