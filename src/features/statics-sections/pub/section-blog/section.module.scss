@@ -142,6 +142,7 @@
 	display: none;
 	@media (min-width: #{$_media-desk}px) {
 		display: block;
+		margin-right: -1.2em;
 	}
 	@include adaptive-set-all-media(
 		(
