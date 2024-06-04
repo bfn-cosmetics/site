@@ -23,6 +23,8 @@
 	margin-top: -0.3em;
 	width: 2.76em;
 	height: 1.76em;
+	position: relative;
+	z-index: 1;
 	@media (min-width: #{$_media-desk}px) {
 		margin-left: -0.5em;
 		margin-top: -0.15em;
