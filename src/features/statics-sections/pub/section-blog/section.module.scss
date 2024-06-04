@@ -171,7 +171,11 @@
 		right: 0;
 		bottom: 0;
 		top: 0;
-		background: linear-gradient(180deg, rgba(47, 51, 56, 0) 0%, #2f3338 100%);
+		background: linear-gradient(
+			180deg,
+			rgba(47, 51, 56, 0) 50%,
+			rgba(0, 0, 0, 0.8) 100%
+		);
 	}
 	img {
 		object-fit: cover;
