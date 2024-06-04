@@ -1,8 +1,11 @@
 @import '@shared/lib/mixins';
 .section {
-	padding-top: 11.2%;
+	padding-top: 9.2%;
 	padding-bottom: 11.2%;
 	position: relative;
+	@media (min-width: #{$_media-desk}px) {
+		padding-top: 11.2%;
+	}
 }
 .title {
 	white-space: nowrap;
